@@ -14,4 +14,8 @@ export class UpdateDoctorInput {
   DOB:string
   @Field()
   Address:string
+  @Field()
+  Gender:string
+  @Field()
+  ContactNumber:string
 }

@@ -20,6 +20,7 @@ AppModule = __decorate([
                 gateway: {
                     serviceList: [
                         { name: "patient", url: "http://localhost:3005/graphql" },
+                        { name: "doctor", url: "http://localhost:3006/graphql" },
                         { name: "medicine", url: "http://localhost:3007/graphql" },
                         { name: "prescription", url: "http://localhost:3008/graphql" },
                     ]

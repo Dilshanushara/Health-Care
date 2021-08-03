@@ -3,5 +3,7 @@ export declare class Doctor {
     FirstName: string;
     LastName: string;
     DOB: string;
+    Gender: string;
     Address: string;
+    ContactNumber: string;
 }

@@ -4,4 +4,6 @@ export declare class CreateDoctorInput {
     LastName: string;
     DOB: string;
     Address: string;
+    Gender: string;
+    ContactNumber: string;
 }

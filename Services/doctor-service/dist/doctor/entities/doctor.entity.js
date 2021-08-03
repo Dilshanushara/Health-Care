@@ -38,7 +38,17 @@ __decorate([
     graphql_1.Field(),
     typeorm_1.Column(),
     __metadata("design:type", String)
+], Doctor.prototype, "Gender", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], Doctor.prototype, "Address", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Doctor.prototype, "ContactNumber", void 0);
 Doctor = __decorate([
     graphql_1.ObjectType(),
     typeorm_1.Entity()

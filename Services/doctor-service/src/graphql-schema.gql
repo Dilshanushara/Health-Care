@@ -2,12 +2,24 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
 type Doctor {
   RegID: String!
   FirstName: String!
   LastName: String!
   DOB: String!
+  Gender: String!
   Address: String!
+  ContactNumber: String!
 }
 
 type Query {
@@ -27,6 +39,8 @@ input CreateDoctorInput {
   LastName: String!
   DOB: String!
   Address: String!
+  Gender: String!
+  ContactNumber: String!
 }
 
 input UpdateDoctorInput {
@@ -35,4 +49,6 @@ input UpdateDoctorInput {
   LastName: String!
   DOB: String!
   Address: String!
+  Gender: String!
+  ContactNumber: String!
 }

@@ -16,7 +16,7 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [doctor_module_1.DoctorModule, graphql_1.GraphQLModule.forRoot({ autoSchemaFile: path_1.join(process.cwd(), 'src/graphql-schema.gql') }),
+        imports: [doctor_module_1.DoctorModule, graphql_1.GraphQLFederationModule.forRoot({ autoSchemaFile: path_1.join(process.cwd(), 'src/graphql-schema.gql') }),
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
                 host: 'localhost',
