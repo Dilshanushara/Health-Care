@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { DoctorRoutingModule } from './doctor-routing.module';
 import { CreateComponent } from './create/create.component';
-import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
   declarations: [
     CreateComponent,
-    ListComponent,
-    EditComponent
+    EditComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
