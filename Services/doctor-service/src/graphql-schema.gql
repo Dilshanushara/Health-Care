@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Doctor {
+  RegID: String!
+  FirstName: String!
+  LastName: String!
+  DOB: String!
+  Address: String!
+}
+
+type Query {
+  getAlldoctors: [Doctor!]!
+  finddoctorbyID(id: String!): Doctor!
+}
+
+type Mutation {
+  createDoctor(createDoctorInput: CreateDoctorInput!): Doctor!
+  updateDoctor(updateDoctorInput: UpdateDoctorInput!): Doctor!
+  removeDoctor(id: String!): Doctor!
+}
+
+input CreateDoctorInput {
+  RegID: String!
+  FirstName: String!
+  LastName: String!
+  DOB: String!
+  Address: String!
+}
+
+input UpdateDoctorInput {
+  RegID: String!
+  FirstName: String!
+  LastName: String!
+  DOB: String!
+  Address: String!
+}
