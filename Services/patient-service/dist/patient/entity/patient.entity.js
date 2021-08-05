@@ -38,12 +38,22 @@ __decorate([
     graphql_1.Field(),
     typeorm_1.Column(),
     __metadata("design:type", String)
+], Patient.prototype, "Gender", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], Patient.prototype, "Address", void 0);
 __decorate([
     graphql_1.Field(),
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], Patient.prototype, "FatherName", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Patient.prototype, "ContactNumber", void 0);
 Patient = __decorate([
     typeorm_1.Entity(),
     graphql_1.Directive('@key(fields: "id")'),

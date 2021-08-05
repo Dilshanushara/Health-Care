@@ -25,18 +25,20 @@ export class CreateComponent implements OnInit {
   }
 
     onSubmit(form :NgForm){
-    let newpatient: patient = {
-    id:form.value.id,
-    FirstName:form.value.FirstName,
-    LastName:form.value.LastName,
-    DOB:form.value.DOB,
-    Address:form.value.Address,
-    FatherName:form.value.FatherName
-
-    }
-    this.addPatient(newpatient);
-    this.router.navigateByUrl('patientlist')
-
+      if( form.valid){
+        let newpatient: patient = {
+          id:form.value.id,
+          FirstName:form.value.FirstName,
+          LastName:form.value.LastName,
+          DOB:form.value.DOB,
+          Address:form.value.Address,
+          FatherName:form.value.FatherName
+      
+          }
+          this.addPatient(newpatient);
+          this.router.navigateByUrl('patientlist')
+        //more code here
+      }
   }
 
   // mypatient:patient={
@@ -62,9 +64,4 @@ export class CreateComponent implements OnInit {
     }
 
 
-
-
-    // create(FirstName:string,LastName:string,Address:string,DOB:string,FatherName:string,Gender:string){
-    //   console.log(FirstName,LastName,DOB,FatherName,Gender,Number)
-    // }
 }

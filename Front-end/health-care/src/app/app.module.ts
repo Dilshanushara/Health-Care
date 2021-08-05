@@ -12,6 +12,7 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DoctorModule } from './doctor/doctor.module';
+import{MedicineModule}from './medicine/medicine.module'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DoctorModule } from './doctor/doctor.module';
     PatientModule,
     PrescriptionModule,
     DoctorModule,
+    MedicineModule,
     FormsModule,
     RouterModule.forRoot([
       {path:'login', component :LoginComponent},

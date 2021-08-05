@@ -20,10 +20,16 @@ export class Patient{
     DOB:string
     @Field()
     @Column()
+    Gender:string
+    @Field()
+    @Column()
     Address:string
     @Field()
     @Column()
     FatherName:string
+    @Field()
+    @Column()
+    ContactNumber:string
 
 
 

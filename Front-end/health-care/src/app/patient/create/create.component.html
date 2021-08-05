@@ -10,9 +10,9 @@
     </style>
   </head>
   <body>
-    <br><br><br>
+    <br><br>
     <h1 class="register">Register New Patient</h1>
-    <br><br><br>
+    <br><br>
     <div class="testbox">
       <form (ngSubmit)="onSubmit(f)" #f ="ngForm" style="border:1px solid #ccc" width="70%" >
         <div class="banner">
@@ -23,11 +23,12 @@
           <div class="name-item">
             <div>
               <label for="name">First Name</label>
-              <input id="name" type="text" placeholder="FirstName" ngModel name= "FirstName"/>
+              <input id="name" type="text" placeholder="FirstName" ngModel name= "FirstName" ngModel required id="FirstName"/>
+              
             </div>
-            <div>
+            <div> 
               <label for="name">Last Name</label>
-              <input id="name"  type="text" placeholder="LastName" ngModel name= "LastName"/>
+              <input id="name"  type="text" placeholder="LastName" ngModel name= "LastName" ngModel required id="LastName"/>
             </div>
             
           </div>
@@ -36,23 +37,20 @@
           <div class="name-item">
             <div>
               <label for="name">Date of Birth</label>
-              <input  type="date" ngModel name= "DOB"/>
+              <input  type="date" ngModel name= "DOB" ngModel required id="DOB"/>
               
             </div>
             <div>
-              <label for="number">Gender</label>
+            
          
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Default radio
-                </label>
-             
-              
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Default checked radio
-                </label>
-          
+              <label for="language">Gender</label>
+              <div class="input-group">
+              <input id="gender-male" type="radio" name="gender" value="male" checked />
+              <label for="gender-male">Male</label>
+                <input id="gender-female" type="radio" name="gender" value="female" />
+                <label for="gender-female">Female</label>
+              </div>
+        
             </div>
           </div>
         </div>
@@ -60,7 +58,7 @@
           <div class="name-item">
             <div>
               <label for="language">Address </label>
-              <input id="language"  type="text" ngModel name= "Address"/>
+              <input id="language"  type="text" ngModel name= "Address" ngModel required id="Address"/>
              
             </div>
             <div>
@@ -73,7 +71,7 @@
           <div class="name-item">
             <div>
               <label for="language">Contact Number</label>
-              <input id="language" #Number type="text" />
+              <input id="language" #Number type="tel" pattern="[0-9]{10}" />
              
             </div>
             <div>

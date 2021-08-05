@@ -3,6 +3,8 @@ export declare class Patient {
     FirstName: string;
     LastName: string;
     DOB: string;
+    Gender: string;
     Address: string;
     FatherName: string;
+    ContactNumber: string;
 }
