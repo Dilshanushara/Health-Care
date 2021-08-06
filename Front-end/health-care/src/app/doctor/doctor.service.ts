@@ -33,7 +33,16 @@ query{
 }
 `;
 
+const DELETE_DOCTOR=gql`
+mutation
+  deleteDoctor($id:String!){
+    removeDoctor(id:$id){
+      RegID
+    
+    }
+  }
 
+  `;
 
 @Injectable({
   providedIn: 'root'
@@ -60,7 +69,7 @@ export class DoctorService {
       mutation: ADD_DOCTOR,
       variables: {
         "input":{
-        "RegistrationID":doctor.RegistrationID,
+        "RegistrationID":doctor.RegID,
         "FirstName":doctor.FirstName,
         "LastName":doctor.LastName,
         "DOB":doctor.DOB,
@@ -72,6 +81,17 @@ export class DoctorService {
       
     });
     
+  }
+
+  deleteDoctor(id:string){
+    return this.apollo.mutate({
+    mutation:DELETE_DOCTOR,
+    variables:{
+      "id":id
+    }
+
+    })
+
   }
 
   // updatePatient( patient:patient):Observable<any> {

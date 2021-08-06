@@ -11,6 +11,6 @@ export class CreatePrescriptionInput {
   @Field()
   PatientID:string
   @Field()
-  MedicineID:string
+  MedicineID:string[]
 
 }

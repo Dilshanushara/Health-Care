@@ -17,8 +17,10 @@ type Patient {
   FirstName: String!
   LastName: String!
   DOB: String!
+  Gender: String!
   Address: String!
   FatherName: String!
+  ContactNumber: String!
 }
 
 type Query {
@@ -36,8 +38,10 @@ input CreatePatientInput {
   FirstName: String!
   LastName: String!
   DOB: String!
+  Gender: String!
   Address: String!
   FatherName: String!
+  ContactNumber: String!
 }
 
 input UpdatePatientinput {
@@ -45,6 +49,8 @@ input UpdatePatientinput {
   FirstName: String!
   LastName: String!
   DOB: String!
+  Gender: String!
   Address: String!
   FatherName: String!
+  ContactNumber: String!
 }

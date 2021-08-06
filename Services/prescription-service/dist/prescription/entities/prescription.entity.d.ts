@@ -7,5 +7,5 @@ export declare class Prescription {
     patient: Patient;
     PatientID: string;
     medicines: Medicine[];
-    MedicineID: string;
+    MedicineID: string[];
 }

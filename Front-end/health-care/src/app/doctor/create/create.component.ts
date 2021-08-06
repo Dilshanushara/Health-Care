@@ -18,7 +18,7 @@ export class CreateComponent implements OnInit {
 
   onSubmit(form :NgForm){
     let newdoctor: doctor = {
-    RegistrationID:form.value.id,
+    RegID:form.value.id,
     FirstName:form.value.FirstName,
     LastName:form.value.LastName,
     DOB:form.value.DOB,

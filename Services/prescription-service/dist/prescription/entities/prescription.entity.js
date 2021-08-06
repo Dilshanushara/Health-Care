@@ -46,8 +46,8 @@ __decorate([
 ], Prescription.prototype, "medicines", void 0);
 __decorate([
     graphql_1.Field(),
-    typeorm_1.Column(),
-    __metadata("design:type", String)
+    typeorm_1.Column("text", { array: true }),
+    __metadata("design:type", Array)
 ], Prescription.prototype, "MedicineID", void 0);
 Prescription = __decorate([
     graphql_1.ObjectType('Prescription'),

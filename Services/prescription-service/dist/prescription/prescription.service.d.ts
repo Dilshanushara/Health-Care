@@ -11,5 +11,5 @@ export declare class PrescriptionService {
     update(id: string, updatePrecsriptionInput: UpdatePrescriptionInput): Promise<Prescription>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
     forPatient(id: string): Promise<Prescription[]>;
-    forMedicine(id: string): Promise<Prescription[]>;
+    forMedicine(id: string[]): Promise<Prescription[]>;
 }

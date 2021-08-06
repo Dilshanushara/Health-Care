@@ -1,6 +1,6 @@
 export interface doctor{
 
-    RegistrationID:string;
+    RegID:string;
     FirstName: string;
     LastName: string;
     Address : string;

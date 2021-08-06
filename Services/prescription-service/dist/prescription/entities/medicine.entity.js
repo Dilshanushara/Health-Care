@@ -17,7 +17,7 @@ let Medicine = class Medicine {
 __decorate([
     graphql_1.Field((type) => graphql_1.ID),
     graphql_1.Directive('@external'),
-    __metadata("design:type", String)
+    __metadata("design:type", Array)
 ], Medicine.prototype, "id", void 0);
 __decorate([
     graphql_1.Field((type) => [prescription_entity_1.Prescription]),

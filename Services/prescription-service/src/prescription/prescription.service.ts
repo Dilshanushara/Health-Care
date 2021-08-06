@@ -36,7 +36,7 @@ export class PrescriptionService {
   forPatient(id:string){
     return this.prescriptionRepository.find( {"PatientID":id} )
   }
-  forMedicine(id:string){
+  forMedicine(id:string[]){
     return this.prescriptionRepository.find( {["MedicineID"]:id} )
 
   }

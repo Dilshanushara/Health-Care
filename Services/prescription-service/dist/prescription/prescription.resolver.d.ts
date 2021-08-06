@@ -16,6 +16,6 @@ export declare class PrescriptionResolver {
     };
     medicines(prescription: Prescription): {
         __typename: string;
-        id: string;
+        id: string[];
     };
 }

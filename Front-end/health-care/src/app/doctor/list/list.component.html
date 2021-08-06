@@ -1,1 +1,63 @@
-<p>list works!</p>
+<div class="card">
+    <div class="card-header">
+       PET care
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2"> Doctor ID:</div>
+            <div class="col-md-4">
+                <input type="text" />
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Filtered by : </h6>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        
+                    <th>Registration Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th> Edit</th>
+                    <th> Delete</th>
+                   
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let doctors of doctors">
+                    <td>
+                        {{doctors.RegID}}
+                    </td>
+                    <td>{{doctors.FirstName}}</td>
+                    <td>{{doctors.LastName}}</td>
+                    <td>{{doctors.DOB}}</td> 
+                    <td>{{doctors.Gender}}</td> 
+                    <td>{{doctors.Address}}</td> 
+                    <td>{{doctors.ContactNumber}}</td> 
+                    <!-- <td> <button class="btn btn-primary">
+                        <a routerlink="owneredit">Edit</a>   
+                   </button></td> -->
+                   
+                <td>  <a  class="btn btn-primary" routerLink="/owneredit">Edit</a></td>
+                <td> <button (click)="Delete(doctors.RegID)" class="btn btn-danger" >Delete</button></td>
+
+
+               
+
+                    
+             
+                 </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+

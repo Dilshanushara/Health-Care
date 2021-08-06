@@ -29,7 +29,7 @@ export class Prescription {
   medicines:Medicine[]
 
   @Field()
-  @Column()
-  MedicineID:string
+  @Column("text", { array: true })
+  MedicineID:string[]
 
 }

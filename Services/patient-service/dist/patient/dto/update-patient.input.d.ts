@@ -3,6 +3,8 @@ export declare class UpdatePatientinput {
     FirstName: string;
     LastName: string;
     DOB: string;
+    Gender: string;
     Address: string;
     FatherName: string;
+    ContactNumber: string;
 }

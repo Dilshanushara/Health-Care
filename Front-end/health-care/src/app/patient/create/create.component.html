@@ -45,9 +45,9 @@
          
               <label for="language">Gender</label>
               <div class="input-group">
-              <input id="gender-male" type="radio" name="gender" value="male" checked />
+              <input id="gender-male" type="radio" name="gender" value="male" ngModel name= "Gender" />
               <label for="gender-male">Male</label>
-                <input id="gender-female" type="radio" name="gender" value="female" />
+                <input id="gender-female" type="radio" name="gender" value="female" ngModel name= "Gender"  />
                 <label for="gender-female">Female</label>
               </div>
         
@@ -71,7 +71,7 @@
           <div class="name-item">
             <div>
               <label for="language">Contact Number</label>
-              <input id="language" #Number type="tel" pattern="[0-9]{10}" />
+              <input id="language"  type="text"   ngModel name= "ContactNumber"/>
              
             </div>
             <div>

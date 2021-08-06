@@ -25,6 +25,7 @@ export class CreateComponent implements OnInit {
   }
 
     onSubmit(form :NgForm){
+      console.log(form.value.Gender);
       if( form.valid){
         let newpatient: patient = {
           id:form.value.id,
@@ -32,7 +33,9 @@ export class CreateComponent implements OnInit {
           LastName:form.value.LastName,
           DOB:form.value.DOB,
           Address:form.value.Address,
-          FatherName:form.value.FatherName
+          FatherName:form.value.FatherName,
+          ContactNumber:form.value.ContactNumber,
+          Gender:form.value.Gender
       
           }
           this.addPatient(newpatient);

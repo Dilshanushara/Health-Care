@@ -1,5 +1,5 @@
 import { Prescription } from "./prescription.entity";
 export declare class Medicine {
-    id: string;
+    id: string[];
     prescription: Prescription[];
 }

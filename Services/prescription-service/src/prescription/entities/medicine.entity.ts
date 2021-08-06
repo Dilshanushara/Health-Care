@@ -8,7 +8,7 @@ import { Prescription } from "./prescription.entity"
 export class Medicine{
     @Field((type)=>ID)
     @Directive('@external')
-    id:string
+    id:string[]
 
     @Field((type)=>[Prescription])
     prescription :Prescription[]

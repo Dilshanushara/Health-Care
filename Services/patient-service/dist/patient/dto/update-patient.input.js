@@ -32,11 +32,19 @@ __decorate([
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
+], UpdatePatientinput.prototype, "Gender", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
 ], UpdatePatientinput.prototype, "Address", void 0);
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
 ], UpdatePatientinput.prototype, "FatherName", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], UpdatePatientinput.prototype, "ContactNumber", void 0);
 UpdatePatientinput = __decorate([
     graphql_1.InputType()
 ], UpdatePatientinput);

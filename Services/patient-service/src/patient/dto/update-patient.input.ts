@@ -12,7 +12,11 @@ export class UpdatePatientinput{
     @Field()
     DOB:string
     @Field()
+    Gender:string
+    @Field()
     Address:string
     @Field()
     FatherName:string
+    @Field()
+    ContactNumber:string
 }

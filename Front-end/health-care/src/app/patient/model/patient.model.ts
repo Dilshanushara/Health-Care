@@ -5,7 +5,10 @@ export interface patient{
     LastName: string;
     Address : string;
     DOB : string;
-    FatherName:string
+    FatherName:string,
+    ContactNumber:string,
+    Gender:string
+
 
 
 

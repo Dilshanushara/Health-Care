@@ -27,7 +27,7 @@ __decorate([
 ], CreatePrescriptionInput.prototype, "PatientID", void 0);
 __decorate([
     graphql_1.Field(),
-    __metadata("design:type", String)
+    __metadata("design:type", Array)
 ], CreatePrescriptionInput.prototype, "MedicineID", void 0);
 CreatePrescriptionInput = __decorate([
     graphql_1.InputType()

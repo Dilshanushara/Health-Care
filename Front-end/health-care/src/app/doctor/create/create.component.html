@@ -14,8 +14,8 @@
     <h1 class="register">Register New Doctor</h1>
     <br><br>
     <div class="testbox">
-      <!-- <form (ngSubmit)="onSubmit(f)" #f ="ngForm" style="border:1px solid #ccc" width="70%" > -->
-          <form>
+      <form (ngSubmit)="onSubmit(f)" #f ="ngForm" style="border:1px solid #ccc" width="70%" >
+          <!-- <form> -->
         <div class="banner">
          
         </div>
@@ -24,7 +24,7 @@
           <div class="name-item">
             <div>
               <label for="name">Doctor Registered ID</label>
-              <input id="name" type="text" placeholder="Enter Doctor Registered ID" ngModel name= "Registered"/>
+              <input id="name" type="text" placeholder="Enter Doctor Registered ID" ngModel name= "id"/>
             </div>
             <div>
               <label for="name">First Name</label>
@@ -37,7 +37,7 @@
           <div class="name-item">
             <div>
               <label for="name">LastName</label>
-              <input  type="name" placeholder="Enter Last Name"  ngModel name= "DOB"/>
+              <input  type="name" placeholder="Enter Last Name"  ngModel name= "LastName"/>
               
             </div>
                 <div>
@@ -52,15 +52,15 @@
            <div>
               <label for="language">Gender</label>
                 <div class="input-group">
-                  <input id="gender-male" type="radio" name="gender" value="male" checked/>
+                  <input id="gender-male" type="radio" name="gender" value="male" checked ngModel name= "Gender"/>
                   <label for="gender-male">Male</label>
-                  <input id="gender-female" type="radio" name="gender" value="female" />
+                  <input id="gender-female" type="radio" name="gender" value="female" ngModel name= "Gender"/>
                   <label for="gender-female">Female</label>
                 </div>
             </div>
           <div>
             <label for="language">Address</label>
-              <input id="language" type="text" placeholder="Enter Address"  ngModel name= "FatherName"/>
+              <input id="language" type="text" placeholder="Enter Address"  ngModel name= "Address"/>
           </div>
 
           </div>
@@ -69,7 +69,7 @@
           <div class="name-item">
             <div>
               <label for="language">Contact Number</label>
-              <input id="language" #Number type="tel" />
+              <input id="language"  type="tel" ngModel name= "ContactNumber"/>ContactNumber
              
             </div>
             <div>

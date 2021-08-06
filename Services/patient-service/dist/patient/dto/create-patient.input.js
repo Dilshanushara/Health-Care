@@ -28,11 +28,19 @@ __decorate([
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
+], CreatePatientInput.prototype, "Gender", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
 ], CreatePatientInput.prototype, "Address", void 0);
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
 ], CreatePatientInput.prototype, "FatherName", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], CreatePatientInput.prototype, "ContactNumber", void 0);
 CreatePatientInput = __decorate([
     graphql_1.InputType()
 ], CreatePatientInput);

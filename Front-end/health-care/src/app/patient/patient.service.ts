@@ -12,6 +12,7 @@ query getAllPatients{
     LastName
     DOB
     Address
+    Gender
   }
   }
 `;
@@ -22,8 +23,10 @@ mutation createPatient($input:CreatePatientInput!){
   FirstName
   LastName
   Address
-  DOB
   FatherName
+  DOB
+  ContactNumber
+  Gender
   
 }
 }
@@ -79,7 +82,9 @@ export class PatientService {
         "LastName":patient.LastName,
         "DOB":patient.DOB,
         "Address":patient.Address,
-        "FatherName":patient.FatherName
+        "FatherName":patient.FatherName,
+        "ContactNumber":patient.ContactNumber,
+        "Gender":patient.Gender
         },
       },
       

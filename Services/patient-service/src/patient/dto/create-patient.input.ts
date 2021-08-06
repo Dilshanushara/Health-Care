@@ -11,9 +11,13 @@ export class CreatePatientInput{
     @Field()
     DOB:string
     @Field()
+    Gender:string
+    @Field()
     Address:string
     @Field()
     FatherName:string
+    @Field()
+    ContactNumber:string
 
 
 
