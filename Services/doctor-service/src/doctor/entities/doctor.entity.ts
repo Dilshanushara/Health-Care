@@ -26,4 +26,7 @@ export class Doctor {
   @Field()
   @Column()
   ContactNumber:string
+  @Field(()=>[String])
+  @Column("text", {array: true})
+  Number:string[]
 }

@@ -32,4 +32,11 @@ export class MedicineService {
     return this.medicineRepository.delete(id);
   }
 
+  // async findMedicines(ids: string[]): Promise<Medicine[]>{
+  //   let medicines: Medicine[] = [];
+  //   for(let id of ids) {
+  //     medicines.push(await this.medicineRepository.findOne(id)); 
+  //   }
+  //   return medicines;
+  // }
 }

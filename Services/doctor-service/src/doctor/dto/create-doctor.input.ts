@@ -16,6 +16,8 @@ export class CreateDoctorInput {
   Address:string
   @Field()
   Gender:string
-  @Field()
-  ContactNumber:string
+  // @Field()
+  // ContactNumber:string
+  @Field(() => [String])
+  Number:string[]
 }

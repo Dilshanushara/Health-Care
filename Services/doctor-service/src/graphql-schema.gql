@@ -20,6 +20,7 @@ type Doctor {
   Gender: String!
   Address: String!
   ContactNumber: String!
+  Number: [String!]!
 }
 
 type Query {
@@ -40,7 +41,7 @@ input CreateDoctorInput {
   DOB: String!
   Address: String!
   Gender: String!
-  ContactNumber: String!
+  Number: [String!]!
 }
 
 input UpdateDoctorInput {

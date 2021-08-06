@@ -25,7 +25,7 @@ let MedicineResolver = class MedicineResolver {
     }
 };
 __decorate([
-    graphql_1.ResolveField((of) => medicine_entity_1.Medicine),
+    graphql_1.ResolveField((of) => [medicine_entity_1.Medicine]),
     __param(0, graphql_1.Parent()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [medicine_entity_1.Medicine]),

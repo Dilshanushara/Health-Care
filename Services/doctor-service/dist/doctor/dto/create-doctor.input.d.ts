@@ -5,5 +5,5 @@ export declare class CreateDoctorInput {
     DOB: string;
     Address: string;
     Gender: string;
-    ContactNumber: string;
+    Number: string[];
 }

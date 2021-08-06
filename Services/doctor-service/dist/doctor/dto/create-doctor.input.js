@@ -38,9 +38,9 @@ __decorate([
     __metadata("design:type", String)
 ], CreateDoctorInput.prototype, "Gender", void 0);
 __decorate([
-    graphql_1.Field(),
-    __metadata("design:type", String)
-], CreateDoctorInput.prototype, "ContactNumber", void 0);
+    graphql_1.Field(() => [String]),
+    __metadata("design:type", Array)
+], CreateDoctorInput.prototype, "Number", void 0);
 CreateDoctorInput = __decorate([
     graphql_1.InputType()
 ], CreateDoctorInput);

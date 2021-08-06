@@ -6,4 +6,5 @@ export declare class Doctor {
     Gender: string;
     Address: string;
     ContactNumber: string;
+    Number: string[];
 }

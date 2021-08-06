@@ -40,4 +40,5 @@ export class PrescriptionService {
     return this.prescriptionRepository.find( {["MedicineID"]:id} )
 
   }
+  
 }

@@ -41,16 +41,16 @@ __decorate([
     __metadata("design:type", String)
 ], Prescription.prototype, "PatientID", void 0);
 __decorate([
-    graphql_1.Field(() => medicine_entity_1.Medicine),
+    graphql_1.Field(() => [medicine_entity_1.Medicine], { nullable: true }),
     __metadata("design:type", Array)
 ], Prescription.prototype, "medicines", void 0);
 __decorate([
-    graphql_1.Field(),
+    graphql_1.Field(() => [String]),
     typeorm_1.Column("text", { array: true }),
     __metadata("design:type", Array)
 ], Prescription.prototype, "MedicineID", void 0);
 Prescription = __decorate([
-    graphql_1.ObjectType('Prescription'),
+    graphql_1.ObjectType(),
     graphql_1.Directive('@key(fields: "id")'),
     typeorm_1.Entity()
 ], Prescription);

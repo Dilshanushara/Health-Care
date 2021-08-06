@@ -42,9 +42,18 @@ export class PrescriptionResolver {
     return {__typename:"Patient",id:prescription.PatientID}
   }
 
-  @ResolveField((of)=>Medicine)
+  @ResolveField((of)=>[Medicine])
   medicines(@Parent() prescription:Prescription){
-    return {__typename:"Medicine",id:prescription.MedicineID}
+    console.log(prescription.MedicineID);
+    prescription.MedicineID.forEach(id => {
+      
+      return {__typename:"Medicine",id: prescription.MedicineID};
+    });
   }
+  // @ResolveField((of)=>Medicine)
+  // medicines(@Parent() prescription:Prescription){
+  //   return {__typename:"Medicine",id:prescription.MedicineID}
+  // }
+  
 
 }

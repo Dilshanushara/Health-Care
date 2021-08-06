@@ -10,7 +10,7 @@ export class CreatePrescriptionInput {
   Comments:string
   @Field()
   PatientID:string
-  @Field()
+  @Field(() => [String])
   MedicineID:string[]
 
 }

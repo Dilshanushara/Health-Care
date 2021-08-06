@@ -28,8 +28,8 @@ type Prescription {
   Comments: String!
   patient: Patient!
   PatientID: String!
-  medicines: Medicine!
-  MedicineID: String!
+  medicines: [Medicine!]
+  MedicineID: [String!]!
 }
 
 type Query {
@@ -47,7 +47,7 @@ input CreatePrescriptionInput {
   Subject: String!
   Comments: String!
   PatientID: String!
-  MedicineID: String!
+  MedicineID: [String!]!
 }
 
 input UpdatePrescriptionInput {

@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { Medicine } from './medicine.entity';
 import { Patient } from './patient.entity';
 
-@ObjectType('Prescription')
+@ObjectType()
 @Directive('@key(fields: "id")')
 @Entity()
 export class Prescription {
@@ -25,10 +25,10 @@ export class Prescription {
   @Column()
   PatientID:string
 
-  @Field(()=>Medicine)
+  @Field(()=>[Medicine], {nullable: true})
   medicines:Medicine[]
 
-  @Field()
+  @Field(() => [String])
   @Column("text", { array: true })
   MedicineID:string[]
 

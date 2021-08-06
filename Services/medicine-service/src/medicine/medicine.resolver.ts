@@ -33,8 +33,9 @@ export class MedicineResolver {
     return this.medicineService.remove(id);
   }
 
-  @ResolveReference ()
+  @ResolveReference()
   resolvereference(ref: {__typename:string,id:string}){
+      console.log(ref.id);
       return this.medicineService.findOne(ref.id);
   }
 

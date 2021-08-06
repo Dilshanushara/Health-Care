@@ -14,8 +14,5 @@ export declare class PrescriptionResolver {
         __typename: string;
         id: string;
     };
-    medicines(prescription: Prescription): {
-        __typename: string;
-        id: string[];
-    };
+    medicines(prescription: Prescription): void;
 }

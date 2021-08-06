@@ -43,7 +43,10 @@ let PrescriptionResolver = class PrescriptionResolver {
         return { __typename: "Patient", id: prescription.PatientID };
     }
     medicines(prescription) {
-        return { __typename: "Medicine", id: prescription.MedicineID };
+        console.log(prescription.MedicineID);
+        prescription.MedicineID.forEach(id => {
+            return { __typename: "Medicine", id: prescription.MedicineID };
+        });
     }
 };
 __decorate([
@@ -88,7 +91,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], PrescriptionResolver.prototype, "patient", null);
 __decorate([
-    graphql_1.ResolveField((of) => medicine_entity_1.Medicine),
+    graphql_1.ResolveField((of) => [medicine_entity_1.Medicine]),
     __param(0, graphql_1.Parent()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [prescription_entity_1.Prescription]),

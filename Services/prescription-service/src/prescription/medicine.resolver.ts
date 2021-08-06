@@ -12,7 +12,7 @@ export class MedicineResolver{
     }
 
 
-    @ResolveField((of)=>Medicine)
+    @ResolveField((of)=>[Medicine])
     prescription(@Parent() medicine:Medicine):Promise<Prescription[]>{
         return this.prescriptionservice.forMedicine(medicine.id)
     }

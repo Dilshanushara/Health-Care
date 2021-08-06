@@ -38,6 +38,7 @@ let MedicineResolver = class MedicineResolver {
         return this.medicineService.remove(id);
     }
     resolvereference(ref) {
+        console.log(ref.id);
         return this.medicineService.findOne(ref.id);
     }
 };
