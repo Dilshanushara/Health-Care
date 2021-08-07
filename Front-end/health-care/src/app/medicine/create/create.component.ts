@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MedicineService } from '../medicine.service';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  medicines:[]=[];
+
+  constructor(private medicineservice:MedicineService) { }
 
   ngOnInit(): void {
+    this.getMedicine();
+  }
+
+  getMedicine(){
+    this.medicineservice.getMedicine().subscribe((data)=>{
+      this.medicines=data.data. getAllmedicine;
+      console.log(this.medicines);
+    })
   }
 
 }

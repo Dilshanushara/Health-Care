@@ -114,15 +114,30 @@
       <div class="name-item">
         <div>
   
-            <label for="" class="form-label">Patient ID</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">     
-        </div>
+          <label for="exampleInputPassword1" class="form-label">Patient ID</label>
+              <select class="form-select" aria-label="Default select example">
+                <option *ngFor="let patient of patients">{{patient.id}}</option>
+                </select>
+              </div>
+            <!-- <label for="" class="form-label">Patient ID</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">      -->
+     
       
-            <div>
+            <!-- <div>
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
               <input type="password" class="form-control" id="exampleInputPassword1">
                 
-              </div>
+              </div> -->
+              <div>
+              <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
+              <select class="form-select" aria-label="Default select example">
+                <!-- <option selected>Medicine Name</option> -->
+                <option *ngFor="let medicine of medicines">{{medicine.name}}</option>
+                <!-- <option value="1">Tablet</option>
+                <option value="2">Capsules</option> -->
+             
+              </select>
+            </div>
       </div>
     </div>
   </div>
@@ -167,7 +182,7 @@
   </div>
 
   <div class="addbutton">
-    <button type="submit" class="btn btn-primary ">Add</button>
+    <button type="submit" class="btn btn-primary ">Add Medicine</button>
 
   </div>
 </form>
