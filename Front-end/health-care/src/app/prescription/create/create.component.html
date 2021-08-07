@@ -116,6 +116,7 @@
   
           <label for="exampleInputPassword1" class="form-label">Patient ID</label>
               <select class="form-select" aria-label="Default select example">
+                <option selected>Patient ID</option>
                 <option *ngFor="let patient of patients">{{patient.id}}</option>
                 </select>
               </div>
@@ -131,8 +132,8 @@
               <div>
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
               <select class="form-select" aria-label="Default select example">
-                <!-- <option selected>Medicine Name</option> -->
-                <option *ngFor="let medicine of medicines">{{medicine.name}}</option>
+                <option selected>Medicine Name</option>
+                <option *ngFor="let medicine of medicines">{{medicine.Name}}</option>
                 <!-- <option value="1">Tablet</option>
                 <option value="2">Capsules</option> -->
              
@@ -182,8 +183,8 @@
   </div>
 
   <div class="addbutton">
-    <button type="submit" class="btn btn-primary ">Add Medicine</button>
-
+    <!-- <button (click)="AddMedicine(medicine.Name)" type="submit" class="btn btn-primary ">Add Medicine</button> -->
+    
   </div>
 </form>
 

@@ -25,7 +25,6 @@ mutation createMedicine($input:CreateMedicineInput!){
 `
 ;
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -45,9 +44,9 @@ AddMedicine(medicine:Medicine):Observable<any>{
     mutation:ADD_MEDICINE,
     variables:{
       "input":{
-      "Dosage": medicine.dosage,
-      "Name": medicine.name,
-      "Type": medicine.type
+      "Dosage": medicine.Dosage,
+      "Name": medicine.Name,
+      "Type": medicine.Type
     }
   }
   })

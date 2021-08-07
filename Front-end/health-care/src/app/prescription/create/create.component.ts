@@ -34,12 +34,8 @@ export class CreateComponent implements OnInit {
     })
   }
 
-  Branches:any[]=[
-    {id:1,name:"fdfdfdg"},
-    {id:2,name:"dgdg"},
-    {id:3,name:"fkkkkk"},
-    {id:4,name:"qqqqq"}
-
-  ]
+  AddMedicine(name:string){
+    
+  }
 
 }

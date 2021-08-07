@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MedicineService } from '../medicine.service';
+import { Medicine } from '../model/medicine.model';
 
 @Component({
   selector: 'app-create',
@@ -8,7 +9,7 @@ import { MedicineService } from '../medicine.service';
 })
 export class CreateComponent implements OnInit {
 
-  medicines:[]=[];
+  medicines:Medicine[]=[];
 
   constructor(private medicineservice:MedicineService) { }
 

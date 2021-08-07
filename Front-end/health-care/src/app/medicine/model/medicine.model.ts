@@ -1,7 +1,7 @@
 export interface Medicine{
 
     id:string
-    name:string
-    type:string
-    dosage:string
+    Name:string
+    Type:string
+    Dosage:string
 }
