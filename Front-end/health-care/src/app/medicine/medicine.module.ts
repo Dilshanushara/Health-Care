@@ -5,6 +5,7 @@ import { MedicineRoutingModule } from './medicine-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
+import { FormsModule, NgForm } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EditComponent } from './edit/edit.component';
   ],
   imports: [
     CommonModule,
-    MedicineRoutingModule
+    MedicineRoutingModule,
+    FormsModule
   ]
 })
 export class MedicineModule { }

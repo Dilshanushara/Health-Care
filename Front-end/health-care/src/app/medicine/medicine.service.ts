@@ -8,6 +8,8 @@ query{
   getAllmedicine{
     id
     Name
+    Type
+    Dosage
   }
     }
     

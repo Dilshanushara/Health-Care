@@ -35,7 +35,9 @@ export class CreateComponent implements OnInit {
   }
 
   AddMedicine(name:string){
-    
+    console.log("medicine name");
+    console.log(name);
+   
   }
 
 }

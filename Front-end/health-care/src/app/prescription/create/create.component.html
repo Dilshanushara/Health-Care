@@ -108,7 +108,7 @@
     </div>
   </div>
 </div>
-<form>
+<form >
   <div class="mb-3">
     <div class="item">
       <div class="name-item">
@@ -117,7 +117,7 @@
           <label for="exampleInputPassword1" class="form-label">Patient ID</label>
               <select class="form-select" aria-label="Default select example">
                 <option selected>Patient ID</option>
-                <option *ngFor="let patient of patients">{{patient.id}}</option>
+                <option *ngFor="let patient of patients" [value]="patient.id">{{patient.id}}</option>
                 </select>
               </div>
             <!-- <label for="" class="form-label">Patient ID</label>
@@ -133,9 +133,8 @@
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
               <select class="form-select" aria-label="Default select example">
                 <option selected>Medicine Name</option>
-                <option *ngFor="let medicine of medicines">{{medicine.Name}}</option>
-                <!-- <option value="1">Tablet</option>
-                <option value="2">Capsules</option> -->
+                <option *ngFor="let medicine of medicines" [value]="medicine.id">{{medicine.Name}} </option>
+              
              
               </select>
             </div>
@@ -182,7 +181,7 @@
 
   </div>
 
-  <div class="addbutton">
+  <div class="addbutton" >
     <!-- <button (click)="AddMedicine(medicine.Name)" type="submit" class="btn btn-primary ">Add Medicine</button> -->
     
   </div>

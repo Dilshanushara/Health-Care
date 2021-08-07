@@ -38,20 +38,20 @@
 <br>
 <br>
 <h3>Add New Medicine</h3>
-<form>
+<form (ngSubmit)="onSubmit(f)" #f ="ngForm" style="border:1px solid #ccc" width="70%" >
   <div class="mb-3">
     <div class="item">
       <div class="name-item">
         <div>
   
             <label for="" class="form-label">Medicine Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" ngModel name="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
           
         </div>
             <div>
-              <label for="exampleInputPassword1" class="form-label">Dosage</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="" class="form-label">Dosage</label>
+              <input type="text" ngModel name="Dosage"class="form-control" id="exampleInputPassword1">
                 
               </div>
       </div>
@@ -63,12 +63,12 @@
       <div class="name-item">
         <div>
           <label for="name">Type</label>
-          <select class="form-select" aria-label="Default select example">
+          <select ngModel name="Type" class="form-select" aria-label="Default select example">
             <option selected>Medicine Type</option>
-            <option value="2">Capsule</option>
-            <option value="3">Drops</option>
-            <option value="3">Liquid</option>
-            <option value="1">Tablet</option>
+            <option value="Capsule">Capsule</option>
+            <option value="Drops">Drops</option>
+            <option value="Liquid">Liquid</option>
+            <option value="Tablet">Tablet</option>
           </select>
           
         </div>
