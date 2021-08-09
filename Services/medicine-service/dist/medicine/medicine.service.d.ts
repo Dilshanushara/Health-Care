@@ -10,4 +10,5 @@ export declare class MedicineService {
     findOne(id: string): Promise<Medicine>;
     update(id: string, updateMedicineInput: UpdateMedicineInput): Promise<Medicine>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
+    findMedicines(ids: string[]): Promise<Medicine[]>;
 }

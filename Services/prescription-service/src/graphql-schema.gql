@@ -14,7 +14,6 @@ directive @provides(fields: String!) on FIELD_DEFINITION
 
 type Medicine {
   id: ID!
-  prescription: [Prescription!]!
 }
 
 type Patient {
@@ -28,7 +27,7 @@ type Prescription {
   Comments: String!
   patient: Patient!
   PatientID: String!
-  medicines: [Medicine!]
+  medicines: [Medicine!]!
   MedicineID: [String!]!
 }
 

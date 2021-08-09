@@ -41,7 +41,7 @@ __decorate([
     __metadata("design:type", String)
 ], Prescription.prototype, "PatientID", void 0);
 __decorate([
-    graphql_1.Field(() => [medicine_entity_1.Medicine], { nullable: true }),
+    graphql_1.Field(() => [medicine_entity_1.Medicine]),
     __metadata("design:type", Array)
 ], Prescription.prototype, "medicines", void 0);
 __decorate([

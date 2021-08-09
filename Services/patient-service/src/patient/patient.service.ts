@@ -23,6 +23,7 @@ export class PatientService {
     }
 
     FindOne(id:string){
+        console.log("Hello from patient service");
        return this.PateintRepository.findOne(id);
         
     }

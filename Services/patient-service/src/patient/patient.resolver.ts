@@ -38,6 +38,7 @@ export class PatientResolver {
 
     @ResolveReference ()
     resolvereference(ref: {__typename:string,id:string}){
+        console.log(ref.id);
         return this.PatientService.FindOne(ref.id);
     }
 

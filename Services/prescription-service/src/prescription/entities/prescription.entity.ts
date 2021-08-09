@@ -25,7 +25,7 @@ export class Prescription {
   @Column()
   PatientID:string
 
-  @Field(()=>[Medicine], {nullable: true})
+  @Field(()=>[Medicine])
   medicines:Medicine[]
 
   @Field(() => [String])

@@ -39,5 +39,12 @@ export class MedicineResolver {
       return this.medicineService.findOne(ref.id);
   }
 
+  // @ResolveReference()
+  // resolvereference(ref: {__typename:string,id:string[]}){
+  //     console.log(ref.id);
+  //     return this.medicineService.findMedicines(ref.id);
+  // }
+
+
 
 }

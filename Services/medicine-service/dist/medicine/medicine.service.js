@@ -39,6 +39,15 @@ let MedicineService = class MedicineService {
     remove(id) {
         return this.medicineRepository.delete(id);
     }
+    async findMedicines(ids) {
+        let medicines = [];
+        for (let id of ids) {
+            console.log(id);
+            medicines.push(await this.medicineRepository.findOne(id));
+        }
+        console.log("===========" + medicines);
+        return medicines;
+    }
 };
 MedicineService = __decorate([
     common_1.Injectable(),

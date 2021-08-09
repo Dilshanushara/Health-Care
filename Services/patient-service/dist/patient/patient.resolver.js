@@ -38,6 +38,7 @@ let PatientResolver = class PatientResolver {
         return this.PatientService.Delete(id);
     }
     resolvereference(ref) {
+        console.log(ref.id);
         return this.PatientService.FindOne(ref.id);
     }
 };

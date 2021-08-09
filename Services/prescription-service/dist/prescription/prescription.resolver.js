@@ -43,7 +43,7 @@ let PrescriptionResolver = class PrescriptionResolver {
         return { __typename: "Patient", id: prescription.PatientID };
     }
     medicines(prescription) {
-        prescription.MedicineID.forEach(id => {
+        return prescription.MedicineID.map(id => {
             console.log(id);
             return { __typename: "Medicine", id: id };
         });

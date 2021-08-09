@@ -11,18 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Medicine = void 0;
 const graphql_1 = require("@nestjs/graphql");
-const prescription_entity_1 = require("./prescription.entity");
 let Medicine = class Medicine {
 };
 __decorate([
     graphql_1.Field((type) => graphql_1.ID),
     graphql_1.Directive('@external'),
-    __metadata("design:type", Array)
+    __metadata("design:type", String)
 ], Medicine.prototype, "id", void 0);
-__decorate([
-    graphql_1.Field((type) => [prescription_entity_1.Prescription]),
-    __metadata("design:type", Array)
-], Medicine.prototype, "prescription", void 0);
 Medicine = __decorate([
     graphql_1.ObjectType(),
     graphql_1.Directive('@extends'),

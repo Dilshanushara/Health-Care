@@ -29,6 +29,7 @@ let PatientService = class PatientService {
         return this.PateintRepository.save(patient);
     }
     FindOne(id) {
+        console.log("Hello from patient service");
         return this.PateintRepository.findOne(id);
     }
     Update(id, updatepatientinput) {
