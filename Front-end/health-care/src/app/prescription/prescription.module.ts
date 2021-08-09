@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PrescriptionRoutingModule } from './prescription-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     CommonModule,
-    PrescriptionRoutingModule
+    PrescriptionRoutingModule,
+    FormsModule
   ]
 })
 export class PrescriptionModule { }
