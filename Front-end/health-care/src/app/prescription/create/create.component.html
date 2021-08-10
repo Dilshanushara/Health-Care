@@ -116,8 +116,7 @@
         <div>
   
           <label for="exampleInputPassword1" class="form-label">Patient ID</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Patient ID</option>
+              <select (change)="getPatientID()" ngModel name="PatientID" class="form-select" aria-label="Default select example">
                 <option *ngFor="let patient of patients" [value]="patient.id"  >{{patient.id}}</option>
                 </select>
               </div>
@@ -132,9 +131,8 @@
               </div> -->
               <div>
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Medicine Name</option>
-                <option *ngFor="let medicine of medicines" [value]="medicine.id">{{medicine.Name}} </option>
+              <select id="MedicineID" class="form-select" aria-label="Default select example">
+                <option *ngFor="let medicine of medicines" [value]="medicine.id" >{{medicine.Name}} </option>
               
              
               </select>
@@ -148,12 +146,12 @@
       <div class="name-item">
         <div>
           <label for="exampleInputPassword1" class="form-label">Subject</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" ngModel name="Subject">
+          <input type="text"  ngModel name="Subject" class="form-control" id="Subject">
           
         </div>
             <div>
               <label for="exampleInputPassword1" class="form-label">Dosage</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
+              <input type="text" class="form-control" id="Dosage">
                 
               </div>
       </div>
@@ -170,7 +168,7 @@
         </div>
             <div>
               <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ngModel name="Comments"></textarea>
+              <textarea ngModel name="Comment" class="form-control" id="Comments" rows="3" ></textarea>
                 
               </div>
       </div>
@@ -182,10 +180,12 @@
 
   </div>
 
+  <br>
   <div class="addbutton" >
-    <!-- <button (click)="AddMedicine(medicine.Name)" type="submit" class="btn btn-primary ">Add Medicine</button> -->
+    <button (click)="myFunc()"  class="btn btn-primary ">Add Medicine</button>
     
   </div>
+  <br>
 </form>
 
 
@@ -203,30 +203,26 @@
 
      
       <div class="table-responsive">
-          <table class="table" >
+          <table class="table"  >
               <thead>
                   <tr>
                       
                   <th>Medicine Name</th>
                   <th>Dosage </th>
                   <th>Subject</th>
-               
-                  <th> Edit</th>
-                  <th> Delete</th>
+                  <th> Remove</th>
                   
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let medicines of prescription_medicines">
+              <tr *ngFor="let medicine of AddedMedicine">
                   <td>
-                      {{medicines.id}}
+                      {{medicine.id}}
                   </td>
-                  <td>{{medicines.Name}}</td>
-                  <td>{{medicines.Dosage}}</td>
+                  <td>{{medicine.Dosage}}</td>
+                  <td>{{medicine.Comment}}</td>
                   
-                  <!-- <td> <button class="btn btn-primary">
-                      <a routerlink="owneredit">Edit</a>   
-                 </button></td> -->
+                  <td> <button (click)="Remove(medicine.id)" class="btn btn-primary">Remove </button></td>
                  
               <!-- <td>  <a  class="btn btn-primary" routerLink="/owneredit">Edit</a></td>
 
@@ -234,10 +230,7 @@
                  <td>  <a  class="btn btn-primary" routerLink="/prescriptionlist">View Prescription</a></td>
                  <td> <button  class="btn btn-danger" >
                   Delete
-             </button></td>
-
-                  
-           
+             </button></td>           
               <!-- </tr> -->
           </tbody>
           </table>
