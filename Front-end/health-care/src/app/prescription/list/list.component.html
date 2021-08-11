@@ -28,7 +28,7 @@
               <tr *ngFor="let prescription of prescriptions">
                   <td>{{prescription.id}}</td> 
                   <td>{{prescription.Subject}}</td>
-                  <td><a  class="btn btn-primary" routerLink="/owneredit">View</a></td>
+                  <td><a  class="btn btn-primary" [routerLink]="['/prescriptionedit',prescription.id]">View</a></td>
                   <td><a  class="btn btn-primary" routerLink="/prescriptionlist">Delete</a></td>
                </tr>
           </tbody>

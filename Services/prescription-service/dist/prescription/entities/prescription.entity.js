@@ -27,7 +27,7 @@ __decorate([
     __metadata("design:type", String)
 ], Prescription.prototype, "Subject", void 0);
 __decorate([
-    graphql_1.Field(),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], Prescription.prototype, "Comments", void 0);

@@ -1,110 +1,12 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Register New Patient </title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <style>
-  
-    
-    </style>
-  </head>
-  <body>
-    <br><br>
-    <h1 class="register">New Prescription</h1>
-    <br><br>
-    <div class="testbox">
-      <form (ngSubmit)="onSubmit(f)" #f ="ngForm" style="border:1px solid #ccc" width="70%" >
-     
-        
-        <br>
-        <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="name">Patient ID</label>
-              <input id="name" type="text" placeholder="FirstName" ngModel name= "FirstName"/>
-            </div>
-            <div>
-              <label for="name">Medicine</label>
-              <input id="name"  type="text" placeholder="LastName" ngModel name= "LastName"/>
-            </div>
-            
-          </div>
-        </div>
-        <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="name">Subject</label>
-              <input id="name"  type="text" placeholder="LastName" ngModel name= "LastName"/>
-            
-              
-            </div>
-            <div>
-              
-              <label for="language">Dosage </label>
-              <input id="language"  type="text" ngModel name= "Address"/>
-  
-
-          
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="name">Date</label>
-              <input  type="date" ngModel name= "DOB"/>
-             
-            </div>
-            <div>
-            <label for="language">Comments</label>
-              <input id="language" type="text" ngModel name= "FatherName"/>
-          </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="language">Doctor Diagnose</label>
-              <input id="language" #Number type="text" />
-             
-            </div>
-            <div>
-              <button type="submit" class="savebtn ">Add</button>
-            </div>
-          </div>
-        </div>
-       
-        <div class="clearfix">
-          <button type="button"  class="cancelbtn">Cancel</button> 
-      
-          <button type="submit" class="savebtn ">Save</button>
-
-
-
-    </div>
-      </form>
-    </div>
-  </body>
-</html> -->
-
-
-
-
 <div class="mb-3">
   <div class="item">
     <div class="name-item">
       <div>
-
         <h3 class="prescription">Create New Prescription</h3>
-
       </div>
-    
-          <div>
-            <h3 class="medicine">Add Medicine to the Prescription</h3>
-
-              
-            </div>
+      <div>
+        <h3 class="medicine">Add Medicine to the Prescription</h3>            
+      </div>
     </div>
   </div>
 </div>
@@ -120,15 +22,7 @@
                 <option *ngFor="let patient of patients" [value]="patient.id"  >{{patient.id}}</option>
                 </select>
               </div>
-            <!-- <label for="" class="form-label">Patient ID</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">      -->
-     
-      
-            <!-- <div>
-              <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-                
-              </div> -->
+
               <div>
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
               <select id="MedicineID" class="form-select" aria-label="Default select example">
@@ -166,25 +60,43 @@
           <input type="text" class="form-control" id="exampleInputPassword1">
           
         </div>
-            <div>
+        <div class="addbutton" >
+          <button (click)="myFunc()"  class="btn btn-primary ">Add Medicine</button>
+          
+        </div>
+            <!-- <div>
               <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
               <textarea ngModel name="Comment" class="form-control" id="Comments" rows="3" ></textarea>
+                
+              </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mb-3">
+    <div class="item">
+      <div class="name-item">
+        <div>
+          <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+          <textarea ngModel name="Comment" class="form-control" id="Comments" rows="3" ></textarea>
+          
+        </div>
+            <div>
+            
                 
               </div>
       </div>
     </div>
   </div>
 
-  <div class="button">
+  <div class="submitbutton">
     <button type="submit" class="btn btn-primary ">Submit</button>
 
   </div>
 
   <br>
-  <div class="addbutton" >
-    <button (click)="myFunc()"  class="btn btn-primary ">Add Medicine</button>
-    
-  </div>
+
   <br>
 </form>
 

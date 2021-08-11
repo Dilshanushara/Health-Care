@@ -63,7 +63,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], PrescriptionResolver.prototype, "findAll", null);
 __decorate([
-    graphql_1.Query(() => prescription_entity_1.Prescription, { name: 'findprecsriptionByID' }),
+    graphql_1.Query(() => prescription_entity_1.Prescription, { name: 'getPrecsriptionByID' }),
     __param(0, graphql_1.Args('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),

@@ -22,7 +22,7 @@ export class PrescriptionResolver {
     return this.precsriptionService.findAll();
   }
 
-  @Query(() => Prescription, { name: 'findprecsriptionByID' })
+  @Query(() => Prescription, { name: 'getPrecsriptionByID' })
   findOne(@Args('id') id: string) {
     return this.precsriptionService.findOne(id);
   }

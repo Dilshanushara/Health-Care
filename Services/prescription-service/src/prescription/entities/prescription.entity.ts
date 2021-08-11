@@ -1,4 +1,5 @@
 import { ObjectType, Field, Int, Directive, ID } from '@nestjs/graphql';
+import { isNullableType } from 'graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { Medicine } from './medicine.entity';
 import { Patient } from './patient.entity';
@@ -13,8 +14,7 @@ export class Prescription {
   @Field()
   @Column()
   Subject:string
-
-  @Field()
+  @Field({ nullable: true })
   @Column()
   Comments:string
 

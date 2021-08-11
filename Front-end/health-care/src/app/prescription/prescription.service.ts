@@ -39,6 +39,25 @@ Patient($id:String!){
   }
   `
 
+  const GET_PRESCRIPTION_BY_ID=gql`
+  query 
+  Prescription($id:String!){
+    getPrecsriptionByID(id:$id){
+      PatientID
+      Subject
+      Comments
+      medicines{
+        id
+        Name
+      }
+      patient{
+        id
+        FirstName
+      }
+    }
+  }
+  `
+
 
 
 @Injectable({
@@ -63,7 +82,7 @@ export class PrescriptionService {
       })
   }
 
-    getPrescriptionForPatient(id :string):Observable<any>{
+  getPrescriptionForPatient(id :string):Observable<any>{
     return this.apollo.watchQuery<any>({
       query: GET_PRESCRIPTION_BY_PATIENTID,
       variables: {
@@ -71,6 +90,16 @@ export class PrescriptionService {
       }
     }).valueChanges;
   }
+
+  getPrescriptionByID(id :string):Observable<any>{
+    return this.apollo.watchQuery<any>({
+      query:GET_PRESCRIPTION_BY_ID,
+      variables:{
+        id:id
+      }
+    }).valueChanges;
+  }
+
 }
 
 

@@ -24,7 +24,7 @@ type Patient {
 type Prescription {
   id: ID!
   Subject: String!
-  Comments: String!
+  Comments: String
   patient: Patient!
   PatientID: String!
   medicines: [Medicine!]!
@@ -33,7 +33,7 @@ type Prescription {
 
 type Query {
   getAllPrecsription: [Prescription!]!
-  findprecsriptionByID(id: String!): Prescription!
+  getPrecsriptionByID(id: String!): Prescription!
 }
 
 type Mutation {
