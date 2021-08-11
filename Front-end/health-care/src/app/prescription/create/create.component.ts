@@ -87,7 +87,7 @@ export class CreateComponent implements OnInit {
       id:form.value.id,
       PatientID:form.value.PatientID,
       Subject:form.value.Subject,
-      Comment :form.value.Comment,
+      Comments :form.value.Comment,
       MedicineIDS:this.MedicineIDS,
     
       }

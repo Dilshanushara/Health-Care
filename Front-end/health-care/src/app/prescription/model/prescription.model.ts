@@ -3,7 +3,7 @@ export interface Prescription{
     Subject:string
     PatientID:string
     MedicineIDS:string[]
-    Comment:string
+    Comments:string
 
 
 

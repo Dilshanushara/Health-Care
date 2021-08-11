@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { patient } from 'src/app/patient/model/patient.model';
 import { Prescription } from '../model/prescription.model';
 import { PrescriptionService } from '../prescription.service';
 
@@ -9,28 +10,21 @@ import { PrescriptionService } from '../prescription.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+ 
+  prescriptions:Prescription[]=[];
 
   constructor(private prescriptionservice:PrescriptionService) { }
 
   ngOnInit(): void {
+    this.getPrescription("8f918cff-1df8-466a-9ab7-7bdea1d02687");
+
   }
 
-  AddPrescription(prescription:Prescription){
-    console.log("pres comp")
-    this.prescriptionservice.addPrescription(prescription).subscribe((data)=>{
-      console .log("prescripton component triggerd")
-    });
-  }
-  onSubmit(form :NgForm){
-    let newprescription: Prescription = {
-      id:form.value.id,
-      PatientID:form.value.PatientID,
-      Subject:form.value.Subject,
-      Comment :form.value.Comment,
-      MedicineIDS:form.value.MedicineIDS
-
-      }
-      this.AddPrescription(newprescription);
-  }
+  getPrescription(id :string){
+    this.prescriptionservice.getPrescriptionForPatient(id).subscribe((data)=>{
+      console.log(data.data.getpatientbyID.prescription);
+      this.prescriptions=data.data.getpatientbyID.prescription;
+    })
+}
 
 }
