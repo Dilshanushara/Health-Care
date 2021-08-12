@@ -27,6 +27,19 @@ mutation createMedicine($input:CreateMedicineInput!){
 `
 ;
 
+const GET_MEDICINE_BY_ID=gql`
+query 
+Medicine($id:String!){
+  getMedicineByID(id:$id){
+    Name
+    Type
+    Dosage
+  }
+}
+
+
+`
+;
 @Injectable({
   providedIn: 'root'
 })
@@ -53,6 +66,15 @@ AddMedicine(medicine:Medicine):Observable<any>{
   }
   })
 
+}
+
+getMedicineByID(id :string):Observable<any>{
+  return this.apollo.watchQuery({
+    query:GET_MEDICINE_BY_ID,
+    variables:{
+      id:id
+    }
+  }).valueChanges;
 }
 
 

@@ -17,6 +17,7 @@ export class EditComponent implements OnInit {
   medicines:Medicine[]=[];
   prescription:any;
   id:string='';
+  myHero = 'Windstorm';
   constructor(private prescriptionservice :PrescriptionService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,7 +31,6 @@ export class EditComponent implements OnInit {
     this.prescriptionservice.getPrescriptionByID(id).subscribe((data)=>{
       
       this.medicines=data.data.getPrecsriptionByID.medicines;
-      console.log(this.medicines)
       this.prescription=data.data.getPrecsriptionByID.prescription
       console.log(this.prescription)
       this.patient=data.data.getPrecsriptionByID.patient;

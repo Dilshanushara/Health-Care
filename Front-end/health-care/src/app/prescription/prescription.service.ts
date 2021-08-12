@@ -60,6 +60,7 @@ Patient($id:String!){
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })

@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import  {initializeKeycloak} from './auth/app.init';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DoctorModule } from './doctor/doctor.module';
 import{MedicineModule}from './medicine/medicine.module'
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { AuthGuard } from './auth/keycloak.guard';
 
 @NgModule({
   declarations: [
@@ -30,16 +33,25 @@ import{MedicineModule}from './medicine/medicine.module'
     DoctorModule,
     MedicineModule,
     FormsModule,
+    KeycloakAngularModule,
     RouterModule.forRoot([
       {path:'login', component :LoginComponent},
       {path:'',redirectTo:'login',pathMatch:"full"},
+      // {path:'home',component:HomeComponent,canActivate:[AuthGuard]}
       {path:'home',component:HomeComponent}
       
   ]),
     GraphQLModule,
     HttpClientModule
 ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService],
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

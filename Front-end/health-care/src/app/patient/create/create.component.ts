@@ -66,5 +66,10 @@ export class CreateComponent implements OnInit {
       });
     }
 
+    goPrev()
+    {
+      window.history.back();
+    }
+
 
 }

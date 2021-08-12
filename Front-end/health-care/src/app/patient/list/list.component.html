@@ -33,9 +33,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let patients of FilteredPatients">
-                    <td>
-                        {{patients.id}}
-                    </td>
+                    <td>{{patients.id}}</td>
                     <td>{{patients.FirstName}}</td>
                     <td>{{patients.LastName}}</td>
                     <td>{{patients.DOB}}</td> 
@@ -50,7 +48,7 @@
 
 
                    <!-- <td>  <a  class="btn btn-primary">Edit</a></td> -->
-                   <td>  <a  class="btn btn-primary" [routerLink]="['/prescriptionlist',patients.id]">Prescription History</a></td>
+                   <td>  <a  class="btn btn-primary" [routerLink]="['/prescriptionlist',patients.id]"> History</a></td>
              
                  </tr>
             </tbody>

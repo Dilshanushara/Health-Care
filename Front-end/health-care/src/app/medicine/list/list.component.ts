@@ -23,4 +23,8 @@ export class ListComponent implements OnInit {
     })
   }
 
+  delete(id:string){
+
+  }
+
 }

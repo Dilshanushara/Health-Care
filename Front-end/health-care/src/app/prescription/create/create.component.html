@@ -26,7 +26,7 @@
               <div>
               <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
               <select id="MedicineID" class="form-select" aria-label="Default select example">
-                <option *ngFor="let medicine of medicines" [value]="medicine.id" >{{medicine.Name}} </option>
+                <option *ngFor="let medicine of AllMedicines" [value]="medicine.id" >{{medicine.Name}} </option>
               
              
               </select>
@@ -64,6 +64,7 @@
           <button (click)="myFunc()"  class="btn btn-primary ">Add Medicine</button>
           
         </div>
+        
             <!-- <div>
               <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
               <textarea ngModel name="Comment" class="form-control" id="Comments" rows="3" ></textarea>
@@ -91,8 +92,8 @@
   </div>
 
   <div class="submitbutton">
-    <button type="submit" class="btn btn-primary ">Submit</button>
-
+    <button type="submit" class="btn btn-primary ">Save</button>
+    <button type="cancel" class="btn btn-primary ">Cancel</button>
   </div>
 
   <br>
@@ -121,20 +122,19 @@
                       
                   <th>Medicine Name</th>
                   <th>Dosage </th>
-                  <th>Subject</th>
                   <th> Remove</th>
                   
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let medicine of AddedMedicine">
+              <tr *ngFor="let medicine of AddedMedicineIDS">
                   <td>
                       {{medicine.id}}
                   </td>
                   <td>{{medicine.Dosage}}</td>
-                  <td>{{medicine.Comment}}</td>
+              
                   
-                  <td> <button (click)="Remove(medicine.id)" class="btn btn-primary">Remove </button></td>
+                  <!-- <td> <button (click)="Remove(medicine.id)" class="btn btn-primary">Remove </button></td> -->
                  
               <!-- <td>  <a  class="btn btn-primary" routerLink="/owneredit">Edit</a></td>
 

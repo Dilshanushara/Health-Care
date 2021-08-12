@@ -11,8 +11,8 @@ import { PatientService } from '../patient.service';
 export class ListComponent implements OnInit {
 
  // patients=[];
- patients:patient[]=[];
- private _idFilter:string =''
+patients:patient[]=[];
+private _idFilter:string =''
 FilteredPatients:patient[]=[]
 message: string = '';
 substriber!: Subscription;

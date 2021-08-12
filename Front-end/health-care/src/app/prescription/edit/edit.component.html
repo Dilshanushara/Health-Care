@@ -23,12 +23,13 @@
             </div>
   
                 <div>
-                <label for="exampleInputPassword1" class="form-label">Medicine Name</label>
-                <select id="MedicineID" class="form-select" aria-label="Default select example">
+                <label for="exampleInputPassword1" class="form-label">Patient Name</label>
+                <input type="text" [ngModel]="patient.FirstName" name="FirstName" value="" readonly>
+                <!-- <select id="MedicineID" class="form-select" aria-label="Default select example"> -->
                   <!-- <option *ngFor="let medicine of medicines" [value]="medicine.id" >{{medicine.Name}} </option> -->
                 
                
-                </select>
+                <!-- </select> -->
               </div>
         </div>
       </div>
@@ -38,14 +39,14 @@
       <div class="item">
         <div class="name-item">
           <div>
-            <label for="exampleInputPassword1" class="form-label">Subject</label>
-            <!-- <input type="text" [ngModel]="prescription.Subject" name="Subject" value="" readonly> -->
+            <label for="exampleInputPassword1" class="form-label">Prescription ID</label>
+            <input type="text" value="{{id}}" readonly>
+            
             
           </div>
               <div>
-                <label for="exampleInputPassword1" class="form-label">Dosage</label>
-                <input type="text" class="form-control" id="Dosage">
-                  
+                <label for="exampleInputPassword1" class="form-label">Subject</label>
+                  <!-- <input type="text" [ngModel]="prescription.Subject" name="Subject" value="" readonly> -->
                 </div>
         </div>
       </div>
