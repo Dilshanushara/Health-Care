@@ -1,0 +1,44 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type Medicine {
+  id: ID!
+  Name: String!
+  Type: String!
+  Dosage: String!
+}
+
+type Query {
+  getAllmedicine: [Medicine!]!
+  getMedicineByID(id: String!): Medicine!
+}
+
+type Mutation {
+  createMedicine(createMedicineInput: CreateMedicineInput!): Medicine!
+  updateMedicine(updateMedicineInput: UpdateMedicineInput!): Medicine!
+  removeMedicine(id: String!): Medicine!
+}
+
+input CreateMedicineInput {
+  Name: String!
+  Type: String!
+  Dosage: String!
+}
+
+input UpdateMedicineInput {
+  Name: String!
+  Type: String!
+  Dosage: String!
+  id: String!
+}
