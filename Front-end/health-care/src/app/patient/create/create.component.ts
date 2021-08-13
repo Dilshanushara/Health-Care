@@ -9,8 +9,6 @@ import { patient } from '../model/patient.model';
 import { PatientService } from '../patient.service';
 
 
-
-
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -18,8 +16,6 @@ import { PatientService } from '../patient.service';
 })
 export class CreateComponent implements OnInit {
   
-
- 
   constructor(private patientservice:PatientService, private router:Router) { 
     
   }

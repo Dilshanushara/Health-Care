@@ -1,18 +1,40 @@
 
+  button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;
+    margin-left: 2%;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    margin-top: 5%;
+    padding: 14px 20px;
+    background-color: #f44336;
+    margin-top: 8%;
+  }
+  
+  .savebtn{
+    background-color: #04AA6D;
+    margin-left: 5%;
+  }
 
-button {
-  margin-left: 5%;
-  margin-top: 2%;
-}
-.submitbutton{
-  margin-top: 90px;
-}
 select,textarea{
   width: 97%;
 }
 
 .addbutton{
-  margin-left: 49%;
+  background-color: #3986eb;
+  margin-right: 38.5%;
 }
 
 h2{
