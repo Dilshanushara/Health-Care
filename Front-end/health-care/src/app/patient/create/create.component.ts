@@ -40,25 +40,13 @@ export class CreateComponent implements OnInit {
       }
   }
 
-  // mypatient:patient={
-  //   id:"111222",
-  //   FirstName:"ABC",
-  //   LastName:"123",
-  //   DOB:"grgr",
-  //   Address:"grgrg",
-  //   FatherName:"vddgd"
-  // }
-
   ngOnInit(): void {
-    // this.addPatient(this.mypatient);
-    // console.log("helloo from component1")
+ 
     }
 
     addPatient(values:patient) {
-      // console.log("helloo from component2")
       this.patientservice.addPatient(values).subscribe((data) => {
-        // console.log("helloo from component3")
-        // console.log(data.data.createPatient);
+
       });
     }
 

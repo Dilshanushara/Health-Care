@@ -39,16 +39,11 @@
                     <td>{{patients.DOB}}</td> 
                     <td>{{patients.Gender}}</td> 
                     <td>{{patients.Address}}</td> 
-                    <!-- <td> <button class="btn btn-primary">
-                        <a routerlink="owneredit">Edit</a>   
-                   </button></td> -->
+    
                    
                 <td>  <a  class="btn btn-primary" routerLink="/owneredit">Edit</a></td>
                 <td> <button (click)="Delete(patients.id)" class="btn btn-danger" >Delete</button></td>
-
-
-                   <!-- <td>  <a  class="btn btn-primary">Edit</a></td> -->
-                   <td>  <a  class="btn btn-primary" [routerLink]="['/prescriptionlist',patients.id]"> History</a></td>
+                <td>  <a  class="btn btn-primary" [routerLink]="['/prescriptionlist',patients.id]"> History</a></td>
              
                  </tr>
             </tbody>
