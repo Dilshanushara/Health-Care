@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 import { MedicineService } from 'src/app/medicine/medicine.service';
 import { Medicine } from 'src/app/medicine/model/medicine.model';
 import { patient } from 'src/app/patient/model/patient.model';
@@ -16,7 +17,7 @@ import { PrescriptionService } from '../prescription.service';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private medicineservice:MedicineService,private patientservice : PatientService,private prescriptionservice:PrescriptionService) { }
+  constructor(private router:Router,private medicineservice:MedicineService,private patientservice : PatientService,private prescriptionservice:PrescriptionService) { }
 
   AllMedicines:Medicine[]=[];
   patients:patient[]=[];
@@ -94,6 +95,9 @@ export class CreateComponent implements OnInit {
     
       }
       this.addPrescription(newprescription);
+      this.router.navigateByUrl('patientlist')
+
+      
   }
 }
 
@@ -115,6 +119,10 @@ export class CreateComponent implements OnInit {
 
     })
 
+  }
+
+  cancel(){
+      window.history.back();
   }
 
 }

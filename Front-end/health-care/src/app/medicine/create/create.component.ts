@@ -36,6 +36,10 @@ export class CreateComponent implements OnInit {
     });
   }
 
+   cancel(){
+      window.history.back();
+  }
+
 
 
 }
